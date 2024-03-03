@@ -1,7 +1,8 @@
+import TabsPage from "./components/Tabs";
 export default function Home() {
   return (
     <div>
-      <h1>Balacccji</h1>
+      <TabsPage />
     </div>
   );
 }
