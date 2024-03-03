@@ -1,9 +1,7 @@
-import HomePage from "@/app/Home";
-
 export default function Home() {
   return (
     <div>
-      <HomePage />
+      <h1>Balacccji</h1>
     </div>
   );
 }
