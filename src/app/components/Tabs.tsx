@@ -5,9 +5,9 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 
 import InputsComponents from "@/app/inputs/inputsComponents";
-
+import DataGridPage from "@/app/DataGrid/DataGridPage";
 export default function TabsPage() {
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState(3);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
@@ -15,6 +15,7 @@ export default function TabsPage() {
 
   const prepareTabs: any = {
     0: <InputsComponents />,
+    3: <DataGridPage />,
   };
   return (
     <Box sx={{ width: "100%", bgcolor: "background.paper" }}>
@@ -22,6 +23,7 @@ export default function TabsPage() {
         <Tab label="Inputs" />
         <Tab label="DATA DISPLAY" />
         <Tab label="FEEDBACK" />
+        <Tab label="DATAGRID" />
       </Tabs>
 
       <div>{prepareTabs[value]}</div>
