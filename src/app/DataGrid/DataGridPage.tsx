@@ -3,6 +3,7 @@ import {
   GridRowsProp,
   GridColDef,
   useGridApiRef,
+  GridColumnMenu,
 } from "@mui/x-data-grid";
 import { useEffect, useState } from "react";
 import Dropdown from "@/app/common/dropdown";
@@ -120,6 +121,9 @@ export default function DataGridPage() {
           loading={loading}
           apiRef={apiRef}
           columnVisibilityModel={columnVisibilityModel}
+          density="comfortable"
+          checkboxSelection
+          hideFooterSelectedRowCount
         />
       </div>
     </div>
