@@ -1,7 +1,8 @@
-import Dropdown from "@/app/common/dropdown";
 import { useState } from "react";
+import Dropdown from "@/app/common/dropdown";
+import BoxComponent from "./layoutTags/boxComponent";
 export default function LayoutComponents() {
-  const [layoutTopic, setLayoutTopic] = useState<string>("");
+  const [layoutTopic, setLayoutTopic] = useState<string>("Box");
   const LayoutTopicOptions = [
     {
       label: "Box",
@@ -27,6 +28,11 @@ export default function LayoutComponents() {
   const handleLayoutChange = (e: any) => {
     setLayoutTopic(e.target.value);
   };
+
+  const prepareLayout: any = {
+    Box: <BoxComponent />,
+  };
+
   return (
     <div>
       <Dropdown
@@ -35,6 +41,7 @@ export default function LayoutComponents() {
         handleDropdownChange={handleLayoutChange}
         label="Layout"
       />
+      <div>{prepareLayout[layoutTopic]}</div>
     </div>
   );
 }
