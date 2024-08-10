@@ -1,32 +1,39 @@
 "use client";
-import { useState } from "react";
+import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
-
+import Divider from "@mui/material/Divider";
 import InputsComponents from "@/app/inputs/inputsComponents";
 import DataGridPage from "@/app/DataGrid/DataGridPage";
+import Layouts from "@/app/layouts/layoutComponents";
 export default function TabsPage() {
-  const [value, setValue] = useState(3);
+  const [value, setValue] = useState(0);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
   };
 
-  const prepareTabs: any = {
-    0: <InputsComponents />,
+  const prepareTabs: { [key: number]: React.ReactElement } = {
+    0: <Layouts />,
+    1: <InputsComponents />,
     3: <DataGridPage />,
   };
-  return (
-    <Box sx={{ width: "100%", bgcolor: "background.paper" }}>
-      <Tabs value={value} onChange={handleChange} centered>
-        <Tab label="Inputs" />
-        <Tab label="DATA DISPLAY" />
-        <Tab label="FEEDBACK" />
-        <Tab label="DATAGRID" />
-      </Tabs>
 
-      <div>{prepareTabs[value]}</div>
-    </Box>
+  const labels = ["Layout", "Inputs", "DATA DISPLAY", "FEEDBACK", "DATAGRID"];
+
+  return (
+    <>
+      {" "}
+      <Box sx={{ width: "100%", bgcolor: "background.paper" }}>
+        <Tabs value={value} onChange={handleChange} centered>
+          {labels.map((el) => {
+            return <Tab label={el} key={el} />;
+          })}
+        </Tabs>
+        <Divider></Divider>
+        <div>{prepareTabs[value]}</div>
+      </Box>
+    </>
   );
 }

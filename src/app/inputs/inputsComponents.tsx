@@ -59,7 +59,7 @@ export default function InputsComponents() {
     },
   ];
 
-  const handleDropdownChange = (e: any) => {
+  const handleInputChange = (e: any) => {
     setInputTopics(e.target.value);
   };
 
@@ -68,15 +68,12 @@ export default function InputsComponents() {
   };
   return (
     <div>
-      <h1 style={{ textAlign: "center", textTransform: "uppercase" }}>
-        Inputs Tags
-      </h1>
       <Dropdown
         value={inputTopics}
         options={InutTopicsOptions}
-        handleDropdownChange={handleDropdownChange}
+        handleDropdownChange={handleInputChange}
+        label="Input"
       />
-
       <div>{findComponents[inputTopics]}</div>
     </div>
   );

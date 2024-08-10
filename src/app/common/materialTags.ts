@@ -5,6 +5,7 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import OutlinedInput from "@mui/material/OutlinedInput";
+import Divider from "@mui/material/Divider";
 const materialTags = {
   Button,
   Box,
@@ -13,6 +14,7 @@ const materialTags = {
   FormControl,
   Select,
   OutlinedInput,
+  Divider,
 };
 
 export default materialTags;
