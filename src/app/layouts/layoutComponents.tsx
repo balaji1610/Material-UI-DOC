@@ -2,8 +2,9 @@ import { useState } from "react";
 import Dropdown from "@/app/common/dropdown";
 import BoxComponent from "./layoutTags/boxComponent";
 import ContainerComponent from "./layoutTags/containerComponent";
+import GridComponent from "./layoutTags/gridComponent";
 export default function LayoutComponents() {
-  const [layoutTopic, setLayoutTopic] = useState<string>("Container");
+  const [layoutTopic, setLayoutTopic] = useState<string>("Grid");
   const LayoutTopicOptions = [
     {
       label: "Box",
@@ -33,6 +34,7 @@ export default function LayoutComponents() {
   const prepareLayout: any = {
     Box: <BoxComponent />,
     Container: <ContainerComponent />,
+    Grid: <GridComponent />,
   };
 
   return (
