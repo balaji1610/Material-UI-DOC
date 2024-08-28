@@ -3,8 +3,10 @@ import Dropdown from "@/app/common/dropdown";
 import BoxComponent from "./layoutTags/boxComponent";
 import ContainerComponent from "./layoutTags/containerComponent";
 import GridComponent from "./layoutTags/gridComponent";
+import StackComponent from "./layoutTags/stackComponent";
+
 export default function LayoutComponents() {
-  const [layoutTopic, setLayoutTopic] = useState<string>("Grid");
+  const [layoutTopic, setLayoutTopic] = useState<string>("Stack");
   const LayoutTopicOptions = [
     {
       label: "Box",
@@ -35,6 +37,7 @@ export default function LayoutComponents() {
     Box: <BoxComponent />,
     Container: <ContainerComponent />,
     Grid: <GridComponent />,
+    Stack: <StackComponent />,
   };
 
   return (

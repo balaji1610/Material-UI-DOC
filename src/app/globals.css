@@ -1,13 +1,31 @@
 ::-webkit-scrollbar {
-    width: 12px;
+  width: 12px;
 }
 
 ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+.layout__stack {
+  border: 1px solid rgb(30, 31, 12);
+  padding: 10px;
+  background-color: rgb(71, 22, 161);
+  color: #fff;
+}
+.stack_without_direction {
+  background-color: rgb(36, 116, 109);
+}
+
+.layout__row_stack {
+  background-color: rgb(90, 165, 20);
+}
+.layout_complex_stack {
+  display: inline;
+  background-color: rgb(33, 31, 163);
+  border-radius: 15px;
 }
