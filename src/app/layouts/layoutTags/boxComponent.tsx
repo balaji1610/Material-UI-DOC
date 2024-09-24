@@ -64,6 +64,14 @@ export default function boxComponent() {
           </Box>
         </ThemeProvider>
       </div>
+
+      <hr />
+      <Box textAlign="center" width="15rem">
+        {" "}
+        <div className="text-transtion">
+          <h1>BALAJI</h1>
+        </div>
+      </Box>
     </div>
   );
 }

@@ -113,7 +113,7 @@ export default function DataGridPage() {
         options={InutTopicsOptions}
         handleDropdownChange={handleDropdownChange}
       />
-      <div style={{ width: "100%" }}>
+      <div style={{ width: "80%" }}>
         <DataGrid
           rows={personalInfo}
           columns={columns}

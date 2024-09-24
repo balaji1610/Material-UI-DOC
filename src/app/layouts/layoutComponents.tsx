@@ -4,9 +4,9 @@ import BoxComponent from "./layoutTags/boxComponent";
 import ContainerComponent from "./layoutTags/containerComponent";
 import GridComponent from "./layoutTags/gridComponent";
 import StackComponent from "./layoutTags/stackComponent";
-
+import ImageListComponent from "./layoutTags/imageListComponent";
 export default function LayoutComponents() {
-  const [layoutTopic, setLayoutTopic] = useState<string>("Stack");
+  const [layoutTopic, setLayoutTopic] = useState<string>("Image List");
   const LayoutTopicOptions = [
     {
       label: "Box",
@@ -38,6 +38,7 @@ export default function LayoutComponents() {
     Container: <ContainerComponent />,
     Grid: <GridComponent />,
     Stack: <StackComponent />,
+    "Image List": <ImageListComponent />,
   };
 
   return (

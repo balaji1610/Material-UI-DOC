@@ -3,7 +3,7 @@ import Divider from "@mui/material/Divider";
 
 export default function stackComponent() {
   return (
-    <div>
+    <div className="scroll-container">
       <Stack spacing={2}>
         <div className="layout__stack stack_without_direction">Stack Row 1</div>
         <div className="layout__stack stack_without_direction">Stack Row 2</div>
