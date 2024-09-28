@@ -2,7 +2,7 @@ import Dropdown from "@/app/common/dropdown";
 import { useState } from "react";
 import Autocomplete from "@/app/inputs/inputsTags/autoComplete";
 export default function InputsComponents() {
-  const [inputTopics, setInputTopics] = useState<string>("");
+  const [inputTopics, setInputTopics] = useState<string>("Autocomplete");
 
   const InutTopicsOptions = [
     {

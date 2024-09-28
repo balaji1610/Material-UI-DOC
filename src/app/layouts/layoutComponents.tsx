@@ -6,7 +6,7 @@ import GridComponent from "./layoutTags/gridComponent";
 import StackComponent from "./layoutTags/stackComponent";
 import ImageListComponent from "./layoutTags/imageListComponent";
 export default function LayoutComponents() {
-  const [layoutTopic, setLayoutTopic] = useState<string>("Image List");
+  const [layoutTopic, setLayoutTopic] = useState<string>("Box");
   const LayoutTopicOptions = [
     {
       label: "Box",
